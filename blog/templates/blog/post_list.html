@@ -37,6 +37,9 @@
           <p>published: {{ post.published_date }}</p>
           <h1><a href="">{{ post.title }}</a></h1>
           <p>{{ post.text|linebreaksbr }}</p>
+          {% if post.youtube_code %}
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{post.youtube_code}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          {% endif %}
       </div>
   {% endfor %}
 

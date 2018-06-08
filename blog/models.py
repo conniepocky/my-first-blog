@@ -11,6 +11,8 @@ class Post(models.Model):
     text = models.TextField()
     created_date = models.DateTimeField(
             default=timezone.now)
+    youtube_code = models.CharField(max_length=16, blank=True, null=True)
+
     published_date = models.DateTimeField(
             blank=True, null=True)
 
